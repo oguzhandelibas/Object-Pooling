@@ -8,9 +8,9 @@ public class Spawn : MonoBehaviour
 
     void Update()
     {
-        if (Random.Range(0, 500) < 1)
+        if (!Pool.singleton.gameIsActive) return;
+        if (Random.Range(0, 500) < 3)
         {
-            //Instantiate(asteroid, transform.position + new Vector3(Random.Range(-9.5f, 9.5f), 0, 0), Quaternion.identity);
             GameObject a = Pool.singleton.Get("asteroid");
             if (a != null)
             {

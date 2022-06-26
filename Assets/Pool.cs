@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class PoolItem
@@ -15,6 +16,10 @@ public class Pool : MonoBehaviour
     public static Pool singleton;
     public List<PoolItem> items;
     public List<GameObject> pooledItems;
+    public GameObject ship;
+    public GameObject healthBar;
+    public bool gameIsActive;
+    public GameObject restartBtn;
 
     private void Awake()
     {
@@ -55,11 +60,25 @@ public class Pool : MonoBehaviour
                 pooledItems.Add(obj);
             }
         }
+        GameActivator(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RestartGame()
     {
+        healthBar.GetComponent<Slider>().value = 100;
+        ship.transform.position = new Vector3(0, ship.transform.position.y, 0);
+        foreach (var item in pooledItems)
+        {
+            item.SetActive(false);
+        }
+        GameActivator(true);
+    }
 
+    public void GameActivator(bool x)
+    {
+        healthBar.SetActive(x);
+        ship.SetActive(x);
+        gameIsActive = x;
+        restartBtn.SetActive(!x);
     }
 }

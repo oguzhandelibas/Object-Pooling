@@ -12,11 +12,11 @@ public class Drive : MonoBehaviour
     {
         if (other.gameObject.CompareTag("asteroid"))
         {
+            other.gameObject.SetActive(false);
             healthbar.value -= 25;
             if (healthbar.value <= 0)
             {
-                Destroy(healthbar.gameObject, 0.1f);
-                Destroy(gameObject, 0.1f);
+                Pool.singleton.GameActivator(false);
             }
         }
     }
@@ -26,10 +26,11 @@ public class Drive : MonoBehaviour
         float translation = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
         transform.Translate(translation, 0, 0);
-
+        float x = transform.position.x;
+        x = Mathf.Clamp(x, -9f, 9f);
+        transform.position = new Vector2(x, transform.position.y);
         if (Input.GetKeyDown("space"))
         {
-            //Instantiate(bullet, transform.position, Quaternion.identity);
             GameObject b = Pool.singleton.Get("bullet");
             if (b != null)
             {
