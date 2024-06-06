@@ -11,6 +11,7 @@ To use the pool system, create a ScriptableObject called CD_Pool. Create CD_Pool
 
 ### Step-2
 After add your prefab object and how many you want in the pool.
+
 <img width="523" alt="Screenshot 2024-06-06 at 15 12 47" src="https://github.com/oguzhandelibas/object-pooling/assets/64430254/690737a9-f283-4716-a28f-10823e2b0913">
 
 ### Step-3
