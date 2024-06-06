@@ -30,7 +30,7 @@ Then place the two ScriptableObjects you created in your object where the PoolMa
 <img width="523" alt="Screenshot 2024-06-06 at 15 18 33" src="https://github.com/oguzhandelibas/object-pooling/assets/64430254/d0ca9b5b-c782-444c-be20-1b32c884ec8e">
 
 
-
+#
 
 > [!IMPORTANT]
 > This is the basic system, I recommend you to examine the codes for its use. Or you can contact me if you have difficulties.
