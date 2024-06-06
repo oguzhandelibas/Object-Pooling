@@ -1,12 +1,18 @@
 # Object-Pooling
 
+
 > [!NOTE]
 > It is a system prepared to be used in Unity Game Engine.
+
+
  
 ## Dependencies
 - https://github.com/ayellowpaper/SerializedDictionary
 
+
+
 ## User Guide
+
 
 ### Step-1
 To use the pool system, create a ScriptableObject called CD_Pool. Create CD_PoolSignals ScriptableObject to assign events.
