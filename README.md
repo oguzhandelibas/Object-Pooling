@@ -1,4 +1,7 @@
 # Object-Pooling
+
+> [!NOTE]
+> It is a system prepared to be used in Unity Game Engine.
  
 ## Dependencies
 - https://github.com/ayellowpaper/SerializedDictionary
@@ -24,7 +27,5 @@ Then place the two ScriptableObjects you created in your object where the PoolMa
 # -----
 
 
-
-
-
-This is the basic system, I recommend you to examine the codes for its use. Or you can contact me if you have difficulties.
+> [!IMPORTANT]
+> This is the basic system, I recommend you to examine the codes for its use. Or you can contact me if you have difficulties.
